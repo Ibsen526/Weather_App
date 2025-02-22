@@ -1,0 +1,190 @@
+* {
+    --between-space: 3vh;
+}
+
+*:focus {
+    outline: none;
+}
+
+.LocWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100vw - 2 * var(--between-space));
+    box-sizing: border-box;
+}
+
+
+.SearchDiv {
+    z-index: 99;
+    position: relative;
+
+    margin: 2.5vh;
+    border-radius: 2vh;
+    box-sizing: border-box;
+    background-color: #313135;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    opacity: 0.7;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.SearchDiv:hover {
+    opacity: 1;
+}
+
+.SearchDiv.Hide {
+    height: 5vh;
+}
+
+.SearchDiv.Show {
+    opacity: 1;
+    max-height: 25vh;
+}
+
+.SearchWrapper {
+    z-index: 99;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    height: 5vh;
+}
+
+.SearchBar {
+    z-index: 100;
+    position: relative;
+
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border-radius: 2vh;
+    width: 25vw;
+    height: 5vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2.2vmin;
+    padding-right: 2vmin;
+    font-size: 2.5vmin;
+    color: #ebe2ec;
+
+}
+
+.SearchBar.Show{
+    width: calc((25vw - 6vh));
+}
+
+
+.SearchIcon {
+    z-index: 101;
+    position: relative;
+    height: 5vh;
+    width: 6vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SearchIcon:hover {
+    color: #553e58;
+    cursor: pointer;
+
+    transition: color 0.2s ease-in-out;
+}
+
+.CancelIcon.Show {
+    color: #ebe2ec;
+    z-index: 100;
+    position: relative;
+    height: 5vh;
+    width: 6vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CancelIcon:hover{
+    color: #553e58;
+    cursor: pointer;
+
+    transition: color 0.2s ease-in-out;
+}
+
+.CancelIcon.Hide{
+    display: none;
+}
+
+.LocResultDiv {
+    position: relative;
+    z-index: 99;
+
+    padding: 2vh;
+    padding-top: 0.2vh;
+    padding-bottom: 1vh;
+    max-height: 20vh;
+
+    overflow: auto;
+    /*make div scrollable*/
+    overflow-x: hidden;
+    /*Hide vertical scrollbar*/
+    scrollbar-width: none;
+    /*make scrollbar invisible*/
+
+    border-bottom-left-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    box-sizing: border-box;
+    background-color: #313135;
+}
+
+.LocResultDiv.Hide {
+    display: none;
+}
+
+.LocResultDiv.Show {
+    background-color: #313135;
+}
+
+.SingleLocDiv {
+    position: relative;
+    z-index: 98;
+    border-top: #ebe2ec;
+
+    border-top: solid;
+    border-width: 0.1vh;
+    border-color: #ebe2ec4d;
+    padding: 0.5vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+
+    font-size: 2.5vmin;
+}
+
+.SingleLocDiv:hover {
+    color: #553e58;
+    cursor: pointer;
+
+    transition: color 0.2s ease-in-out;
+}
+
+.CurrentLoc {
+    height: 5vh;
+    margin: 2.5vh;
+
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2vmin;
+    padding-right: 2vmin;
+    font-size: 2.5vmin;
+
+    display: flex;
+    align-items: center;
+}
+
+.LocName {
+    color: #ebe2ec;
+    margin-left: 1vh;
+}

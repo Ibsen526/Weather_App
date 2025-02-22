@@ -1,0 +1,57 @@
+.TimelineDiv {
+    position: absolute;
+    width: 65vw;
+    height: calc(37vh - var(--between-space));
+    left: 0;
+    bottom: 0;
+
+    border-radius: 4vh;
+    background-color: var(--basecolor);
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.575);
+}
+.Graphs {
+    width: inherit;
+    height: inherit;
+    
+    display: flex;
+    position: relative;
+    flex-direction: row;
+
+    overflow: auto;
+    overflow-y: auto;
+    scrollbar-width: none;
+    z-index: 0;
+}
+.StaticGraph {
+    z-index: 1;
+    width: 0.1vw; 
+}
+.Scrollable {
+    min-width: inherit;
+    /* height: calc(35vh - var(--between-space)); */
+    box-sizing: border-box;
+    border-radius: 4vh;
+
+    /*overflow-x: auto; 
+    overflow-y:visible; 
+    scrollbar-width: none;*/ 
+
+    display: flex;
+    justify-content: flex-start; 
+    flex-direction: column;
+
+}
+.DataGraph {
+    z-index: 2;      
+}
+.Icons {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 2000px; /*2000px*/
+    padding-left: 29px;
+    top: -10px    
+}
+.Icons > * {
+    margin-right: 21.5px;
+}

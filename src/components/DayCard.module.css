@@ -1,0 +1,104 @@
+.Card {
+    z-index: 0;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    color: #ebe2ec;
+    aspect-ratio: 3/4;
+    height: 32vh;
+    border-radius: 3vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 2.5vh 0.5vh 2.5vh 2.5vh;
+    background-color: #313135;
+    box-sizing: border-box;
+    
+    cursor: default;
+    user-select: none;
+
+    opacity:0.7;
+    transition: opacity 0.25s ease-in-out;
+
+}
+
+.Card.Selected {
+    opacity: 1;
+    border: solid #ebe2ec;
+}
+
+.Card.unSelected{
+    opacity: 0.7;
+}
+
+.Card.Card:hover { opacity:1; }
+
+.WeatherDate{
+    text-align: center;
+    line-height: 0;
+    height: 6vh; /*6vh*/
+    margin-top: -3vh;
+}
+
+#Day{
+    font-size: 3.5vmin;
+}
+
+#Date{
+    font-size: 2.5vmin;
+    font-weight: lighter;
+}
+
+.Temp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.DayTemp {
+    font-size: 5vmin;
+    font-weight: 370;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.MinMaxTemp {
+    font-size: 2.2vmin;
+    line-height: 0px;
+    text-align: right;
+    font-weight: 600;
+
+    padding-left: 5px;
+    margin-left: 5px;
+    border-left: solid 2px;
+    height: 7vh; /*50px*/
+}
+
+.MaxTemp{
+    position: relative;
+    top: 0;
+}
+.MinTemp{
+    position: relative;
+    bottom: 0;
+}
+
+.CTemp{
+    font-size: 6vmin;
+    margin-left: 0.5vh;
+    font-weight: lighter;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.WeatherIcon {
+    padding-top: 2.5vh;
+    margin-bottom: -2vh;
+    height: 15vh;
+}

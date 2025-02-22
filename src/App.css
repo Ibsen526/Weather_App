@@ -1,0 +1,95 @@
+.App {
+  --between-space: 3vh;
+  --font-color: #ebe2ec;
+  --basecolor: #1b1a1f;
+  --basecolorlight: #222328;
+  --blueishgrey: #30333c;
+  --blueishgreylight: #404656;
+  --blue: #324576;
+  --bluefont: #c3c3c3;
+  --violet: #553e58;
+  --violetfont: #fae0fb;
+
+  min-height: 100vh;
+  font-size: 1.4rem;
+  color: var(--violetfont);
+  background-color: var(--violet);
+  color: var(--font-color);
+
+  cursor: default;
+  user-select: none;
+}
+
+.Header {
+  z-index: 100;
+  position: fixed;
+  width: 100vw;
+  height: 14vh;
+  padding-top: 2.5vh;
+  display: flex;
+  justify-content: center;
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10vmin;
+}
+
+.Content {
+  position: absolute;
+  width: 100vw;
+  min-height: 88vh;
+  top: 12vh;
+
+  display: flex;
+  justify-content: center;
+
+  background: var(--violet);
+  border-radius: 6vh 6vh 0 0;
+}
+
+.InnerContent {
+  position: absolute;
+  display: flex;
+
+  width: calc(100vw - 2 * var(--between-space));
+  height: inherit;
+
+  top: var(--between-space);
+  bottom: var(--between-space);
+}
+
+.LocationDiv {
+  position: absolute;
+  width: inherit;
+  height: calc(46vh - var(--between-space) / 2);
+  box-shadow: inset 0px 0px 15px 7px rgba(0, 0, 0, 0.2);
+
+  /*background-color: var(--small-div-backround);*/
+  border-radius: 4vh;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--basecolor);
+}
+
+.LocationSearchDiv{
+  position: absolute;
+  height: 10vh;
+  top: 0;
+}
+
+.LocationInnerDiv{
+  width: inherit;
+  /* height: calc(35vh - var(--between-space)); */
+  box-sizing: border-box;
+  border-radius: 4vh;
+
+  overflow: auto; /*make div scrollable*/
+  overflow-y: hidden; /*Hide vertical scrollbar*/
+  scrollbar-width: none; /*make scrollbar invisible*/
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.App-link {
+  color: lightblue;
+}

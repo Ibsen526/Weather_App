@@ -1,0 +1,49 @@
+*{
+    --between-space: 3vh;
+    --basecolor: #1b1a1f;
+  
+}
+
+.DescDiv {
+    position: absolute;
+    width: calc(100vw - 2 * var(--between-space) - 65.5vw - var(--between-space));
+    height: calc(37vh - var(--between-space));
+    right: 0;
+    bottom: 0;
+
+    border-radius: 4vh;
+    background-color: var(--basecolor);
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.575);   
+
+    display: flex;  
+    z-index: 1;  
+}
+.Scrollable {
+    position: relative;
+    min-height: inherit;
+    width: inherit;
+    box-sizing: border-box;
+    border-radius: 4vh;
+    padding: 4vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /*Hide vertical scrollbar*/
+    scrollbar-width: none; /*make scrollbar invisible*/
+    
+}
+
+.Row {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1vh;
+}
+
+.Description {
+    font-size: 2.5vmin;   
+    display: flex;
+    align-items: center;
+    padding-left: 2vh;
+ }
